@@ -128,7 +128,9 @@ I recently automated repetitive lead sorting by separating obvious routing rules
 
 ## 12. Reproduction (Artifact access)
 
-Public repo, no login. `MISTRAL_API_KEY` via local `.env` (never submitted). Repro:
+Public repo (no login): https://github.com/VedantBhayani/lead-triage-012
+
+`MISTRAL_API_KEY` via local `.env` (never submitted). Repro:
 
 ```powershell
 python triage.py
