@@ -124,7 +124,7 @@ At real volume, the first weaknesses would be duplicate identity across historic
 
 ## 11. Meta question
 
-I recently automated repetitive lead sorting by separating obvious routing rules from cases that need judgment. I deliberately left ambiguous, legally sensitive, and high-impact decisions manual because a fast wrong answer is worse than a slower human review. I also kept the policy editable in Markdown so the operating rules can change without rewriting the whole runner.
+I recently automated idea collection with a Hermes agent that polls Reddit RSS feeds without logging in and pushes React alerts to Telegram, so techniques surface without me doomscrolling. I deliberately kept contacts and the keyword filters manual because the filter caused constant misses and false hits. I also keep final Reddit picks manual since only I can judge what is worth trying. Automation finds it, I decide what matters.
 
 ## 12. Reproduction (Artifact access)
 
