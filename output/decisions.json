@@ -38,8 +38,8 @@
   {
     "lead_id": "L-007",
     "decision": "NURTURE",
-    "reason": "Credible CPG company with a relevant need but a stated budget of $50/month is inconsistent with a global rebrand support program.",
-    "confidence": 0.9
+    "reason": "Credible CPG company with a relevant global rebrand need but a low monthly budget signal requiring verification.",
+    "confidence": 0.85
   },
   {
     "lead_id": "L-008",
@@ -80,7 +80,7 @@
   {
     "lead_id": "L-014",
     "decision": "NURTURE",
-    "reason": "Credible early-stage startup with a relevant service need and future budget signal, but current budget is low and timing is future-timed.",
+    "reason": "Credible early-stage startup with a relevant service need and future budget signal, but timing and current budget are not sales-ready.",
     "confidence": 0.95
   },
   {
@@ -93,7 +93,7 @@
     "lead_id": "L-016",
     "decision": "QUALIFY",
     "reason": "Credible HVAC business with a relevant service need and coherent budget and contact data.",
-    "confidence": 0.95
+    "confidence": 0.98
   },
   {
     "lead_id": "L-017",
