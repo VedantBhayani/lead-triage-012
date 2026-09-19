@@ -1,6 +1,6 @@
 # AI Automation Intern 012 — Lead Triage Agent
 
-Brief version: 2026-07.
+## Written answer — brief version: 2026-07
 
 Fixture SHA-256: `[Observed] CC1927CA771C37B186A2ABDB7B9757594DA79EC6DDA074E5A514DD2761CC8599`.
 
@@ -17,6 +17,8 @@ Fixture SHA-256: `[Observed] CC1927CA771C37B186A2ABDB7B9757594DA79EC6DDA074E5A51
 9. `output/run.log` records execution, and `output/prompt_trace.jsonl` records the policy prompt, row payloads, model responses, and final decisions.
 
 ## 2. Architecture
+
+Operating artifact: `triage.py` + `prompts/` (5 files) + `output/decisions.json` + `output/run.log` + `output/prompt_trace.jsonl`, run via `python triage.py`.
 
 The runner uses Python's standard library and the Mistral Chat Completions HTTPS API. The API key is loaded from the local `.env` file and is never logged. Prompt policy is split into `prompts/system.md`, `prompts/decision_policy.md`, `prompts/edge_cases.md`, `prompts/output_schema.md`, and `prompts/examples.md`.
 
@@ -71,7 +73,7 @@ Humans review malformed records, duplicate identity conflicts, privacy/legal req
 | Claim | Source | Proof tier |
 |---|---|---|
 | All fixture rows were processed | `output/run.log` and `output/decisions.json` | Tier 3 — execution record |
-| Decisions are reproducible for this fixture | `fixtures/inbound_leads.csv` checksum and `triage.py` | Tier 2/3 — artifact and source record |
+| Decisions are reproducible for this fixture | `fixtures/inbound_leads.csv` checksum and `triage.py` | Tier 2 — source record |
 | Prompt policy was used | `output/prompt_trace.jsonl` system-prompt hash and prompt files | Tier 3 — prompt trace |
 | Edge-case behavior is tested | `tests/test_triage.py` and test output | Tier 3 — source record |
 | The competitor miss was detected and fixed | first-run observation, regression test, final output | Tier 3 — run history and artifact |
@@ -114,9 +116,9 @@ I labeled all 20 rows by hand before the final run, then compared. Agreement 18/
 
 ## 9. AI usage disclosure
 
-Runtime inference: Mistral `mistral-small-latest`, `temperature: 0`, `response_format: json_object`. Only 5/20 rows reach live Mistral (`L-007`, `L-009`, `L-013`, `L-014`, `L-016`); 2/20 are deterministic (`L-010` fake, `L-011` competitor); 13/20 are preflight `ESCALATE` with no API call. Build assistance (scaffolding, regex/retry boilerplate, prompt drafts) was AI-aided; all safety thresholds, redaction, retry policy, Tier 4 labels, and final decisions were reviewed by me. Verified myself: `[Observed]` 15/15 unit tests, `[Observed]` 16/16 adversarial, `[Observed]` row counts/checksum/traces, `[Observed]` 18/20 manual agreement (§7b). Weak spots: paraphrase/base64 injection beyond intent regexes leans on LLM hierarchy; company/website retained for audit; no historical CRM dedup; confidence uncalibrated.
+Runtime inference: Mistral `mistral-small-latest`, `temperature: 0`, `response_format: json_object`. Only 5/20 rows reach live Mistral (`L-007`, `L-009`, `L-013`, `L-014`, `L-016`); 2/20 are deterministic (`L-010` fake, `L-011` competitor); 13/20 are preflight `ESCALATE` with no API call. Build assistance (scaffolding, regex/retry boilerplate, prompt drafts) was AI-aided; all safety thresholds, redaction, retry policy, Tier 4 labels, and final decisions were reviewed by me. Verified myself: `[Observed]` 16/16 unit tests, `[Observed]` 16/16 adversarial, `[Observed]` row counts/checksum/traces, `[Observed]` 18/20 manual agreement (§7b). Weak spots: paraphrase/base64 injection beyond intent regexes leans on LLM hierarchy; company/website retained for audit; no historical CRM dedup; confidence uncalibrated.
 
-## 10. What breaks next
+## 10. What breaks next (Failure handling)
 
 At real volume, the first weaknesses would be duplicate identity across historical CRM records, changing qualification criteria, confidence calibration, and human-review backlog. Retry/backoff with jitter and `Retry-After` handling is already implemented in `triage.py` (`MistralClassifier`, `max_retries=3`). Before production, I would still add persistent deduplication, policy versioning, reviewer feedback capture, and a measured manual-vs-agent comparison (see §7b).
 
@@ -124,7 +126,9 @@ At real volume, the first weaknesses would be duplicate identity across historic
 
 I recently automated repetitive lead sorting by separating obvious routing rules from cases that need judgment. I deliberately left ambiguous, legally sensitive, and high-impact decisions manual because a fast wrong answer is worse than a slower human review. I also kept the policy editable in Markdown so the operating rules can change without rewriting the whole runner.
 
-## 12. Reproduction
+## 12. Reproduction (Artifact access)
+
+Public repo, no login. `MISTRAL_API_KEY` via local `.env` (never submitted). Repro:
 
 ```powershell
 python triage.py
