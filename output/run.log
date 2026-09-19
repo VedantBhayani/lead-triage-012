@@ -1,0 +1,88 @@
+Input file: E:\Lead Qualification Agent - Copy\fixtures\inbound_leads.csv
+Rows read: 20
+Fixture SHA-256: cc1927ca771c37b186a2abdb7b9757594da79ec6dda074e5a514dd2761cc8599
+Prompt policy files: prompts/*.md
+System prompt SHA-256: fe537210347745a723f05a56a44d27d06a1a98ea19365cd19c2938258825f5c2
+Prompt trace: E:\Lead Qualification Agent - Copy\output\prompt_trace.jsonl
+
+[L-001]
+Preflight: Duplicate identity has conflicting lead details
+Decision: {"decision": "ESCALATE", "reason": "Duplicate identity has conflicting lead details", "confidence": 1.0}
+
+[L-002]
+Preflight: Required field is missing: company
+Decision: {"decision": "ESCALATE", "reason": "Required field is missing: company", "confidence": 1.0}
+
+[L-003]
+Preflight: Duplicate identity has conflicting lead details
+Decision: {"decision": "ESCALATE", "reason": "Duplicate identity has conflicting lead details", "confidence": 1.0}
+
+[L-004]
+Preflight: Required field is missing: email
+Decision: {"decision": "ESCALATE", "reason": "Required field is missing: email", "confidence": 1.0}
+
+[L-005]
+Preflight: monthly_budget_usd is malformed
+Decision: {"decision": "ESCALATE", "reason": "monthly_budget_usd is malformed", "confidence": 1.0}
+
+[L-006]
+Preflight: Lead text contains an instruction attempting to manipulate the classifier
+Decision: {"decision": "ESCALATE", "reason": "Lead text contains an instruction attempting to manipulate the classifier", "confidence": 1.0}
+
+[L-007]
+Preflight: passed
+Decision: {"decision": "NURTURE", "reason": "Credible CPG company with a relevant need but a stated budget of $50/month is inconsistent with a global rebrand support program.", "confidence": 0.9}
+
+[L-008]
+Preflight: Required field is missing: company
+Decision: {"decision": "ESCALATE", "reason": "Required field is missing: company", "confidence": 1.0}
+
+[L-009]
+Preflight: passed
+Decision: {"decision": "QUALIFY", "reason": "Credible marketplace with approved budget and clear need for international SEO and multilingual content.", "confidence": 0.98}
+
+[L-010]
+Preflight: passed
+Decision: {"decision": "REJECT", "reason": "Submission appears to be a test or fake lead.", "confidence": 1.0}
+
+[L-011]
+Preflight: passed
+Decision: {"decision": "REJECT", "reason": "The sender appears to be a marketing agency gathering competitive information.", "confidence": 0.98}
+
+[L-012]
+Preflight: submitted_at is malformed
+Decision: {"decision": "ESCALATE", "reason": "submitted_at is malformed", "confidence": 1.0}
+
+[L-013]
+Preflight: passed
+Decision: {"decision": "ESCALATE", "reason": "Request for proprietary methodology deck and past client results without a clear buying intent signal.", "confidence": 0.95}
+
+[L-014]
+Preflight: passed
+Decision: {"decision": "NURTURE", "reason": "Credible early-stage startup with a relevant service need and future budget signal, but current budget is low and timing is future-timed.", "confidence": 0.95}
+
+[L-015]
+Preflight: Required field is missing: company
+Decision: {"decision": "ESCALATE", "reason": "Required field is missing: company", "confidence": 1.0}
+
+[L-016]
+Preflight: passed
+Decision: {"decision": "QUALIFY", "reason": "Credible HVAC business with a relevant service need and coherent budget and contact data.", "confidence": 0.95}
+
+[L-017]
+Preflight: monthly_budget_usd is malformed
+Decision: {"decision": "ESCALATE", "reason": "monthly_budget_usd is malformed", "confidence": 1.0}
+
+[L-018]
+Preflight: Required field is missing: message
+Decision: {"decision": "ESCALATE", "reason": "Required field is missing: message", "confidence": 1.0}
+
+[L-019]
+Preflight: Lead is a privacy or legal request rather than a sales decision
+Decision: {"decision": "ESCALATE", "reason": "Lead is a privacy or legal request rather than a sales decision", "confidence": 1.0}
+
+[L-020]
+Preflight: Lead contains a suspicious executable link
+Decision: {"decision": "ESCALATE", "reason": "Lead contains a suspicious executable link", "confidence": 1.0}
+
+Rows written: 20
