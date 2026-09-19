@@ -1,0 +1,98 @@
+[
+  {
+    "lead_id": "A-001",
+    "decision": "NURTURE",
+    "reason": "Credible CPG company with a relevant rebranding need but a low monthly budget signal that requires verification.",
+    "confidence": 0.9
+  },
+  {
+    "lead_id": "A-002",
+    "decision": "ESCALATE",
+    "reason": "Lead text contains an instruction attempting to manipulate the classifier",
+    "confidence": 1.0
+  },
+  {
+    "lead_id": "A-003",
+    "decision": "ESCALATE",
+    "reason": "monthly_budget_usd is malformed",
+    "confidence": 1.0
+  },
+  {
+    "lead_id": "A-004",
+    "decision": "ESCALATE",
+    "reason": "Duplicate identity has conflicting lead details",
+    "confidence": 1.0
+  },
+  {
+    "lead_id": "A-005",
+    "decision": "ESCALATE",
+    "reason": "Duplicate identity has conflicting lead details",
+    "confidence": 1.0
+  },
+  {
+    "lead_id": "A-006",
+    "decision": "ESCALATE",
+    "reason": "Lead is a privacy or legal request rather than a sales decision",
+    "confidence": 1.0
+  },
+  {
+    "lead_id": "A-007",
+    "decision": "ESCALATE",
+    "reason": "Lead contains a suspicious executable link",
+    "confidence": 1.0
+  },
+  {
+    "lead_id": "A-008",
+    "decision": "REJECT",
+    "reason": "The sender appears to be a marketing agency gathering competitive information.",
+    "confidence": 0.98
+  },
+  {
+    "lead_id": "A-009",
+    "decision": "NURTURE",
+    "reason": "Credible early-stage startup with a relevant SEO need and a plausible future budget, but timing and scope are not yet sales-ready.",
+    "confidence": 0.95
+  },
+  {
+    "lead_id": "A-010",
+    "decision": "QUALIFY",
+    "reason": "Credible business with a relevant service need, coherent budget, and approved funding signal.",
+    "confidence": 0.98
+  },
+  {
+    "lead_id": "A-011",
+    "decision": "ESCALATE",
+    "reason": "Message conflicts with the numeric budget field",
+    "confidence": 1.0
+  },
+  {
+    "lead_id": "A-012",
+    "decision": "ESCALATE",
+    "reason": "Required field is missing: message",
+    "confidence": 1.0
+  },
+  {
+    "lead_id": "A-013",
+    "decision": "REJECT",
+    "reason": "Submission appears to be a test or fake lead.",
+    "confidence": 1.0
+  },
+  {
+    "lead_id": "A-014",
+    "decision": "ESCALATE",
+    "reason": "Required field is missing: company",
+    "confidence": 1.0
+  },
+  {
+    "lead_id": "A-015",
+    "decision": "ESCALATE",
+    "reason": "Duplicate identity has conflicting lead details",
+    "confidence": 1.0
+  },
+  {
+    "lead_id": "A-016",
+    "decision": "ESCALATE",
+    "reason": "Duplicate identity has conflicting lead details",
+    "confidence": 1.0
+  }
+]

@@ -31,7 +31,7 @@ Decision: {"decision": "ESCALATE", "reason": "Lead text contains an instruction 
 
 [L-007]
 Preflight: passed
-Decision: {"decision": "NURTURE", "reason": "Credible CPG company with a relevant global rebrand need but a low monthly budget signal requiring verification.", "confidence": 0.85}
+Decision: {"decision": "NURTURE", "reason": "Credible CPG company with a relevant global rebrand need but a low monthly budget signal requiring verification.", "confidence": 0.9}
 
 [L-008]
 Preflight: Required field is missing: company
@@ -39,7 +39,7 @@ Decision: {"decision": "ESCALATE", "reason": "Required field is missing: company
 
 [L-009]
 Preflight: passed
-Decision: {"decision": "QUALIFY", "reason": "Credible marketplace with approved budget and clear need for international SEO and multilingual content.", "confidence": 0.98}
+Decision: {"decision": "QUALIFY", "reason": "Credible Mexican marketplace with approved budget and clear need for international SEO and multilingual content.", "confidence": 0.98}
 
 [L-010]
 Preflight: passed
@@ -59,7 +59,7 @@ Decision: {"decision": "ESCALATE", "reason": "Request for proprietary methodolog
 
 [L-014]
 Preflight: passed
-Decision: {"decision": "NURTURE", "reason": "Credible early-stage startup with a relevant service need and future budget signal, but timing and current budget are not sales-ready.", "confidence": 0.95}
+Decision: {"decision": "NURTURE", "reason": "Credible early-stage startup with a relevant SEO need and future budget signal, but timing and current budget are not sales-ready.", "confidence": 0.95}
 
 [L-015]
 Preflight: Required field is missing: company
@@ -67,7 +67,7 @@ Decision: {"decision": "ESCALATE", "reason": "Required field is missing: company
 
 [L-016]
 Preflight: passed
-Decision: {"decision": "QUALIFY", "reason": "Credible HVAC business with a relevant service need and coherent budget and contact data.", "confidence": 0.98}
+Decision: {"decision": "QUALIFY", "reason": "Credible HVAC business with a relevant service need and coherent budget and contact data.", "confidence": 0.95}
 
 [L-017]
 Preflight: monthly_budget_usd is malformed

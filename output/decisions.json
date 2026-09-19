@@ -39,7 +39,7 @@
     "lead_id": "L-007",
     "decision": "NURTURE",
     "reason": "Credible CPG company with a relevant global rebrand need but a low monthly budget signal requiring verification.",
-    "confidence": 0.85
+    "confidence": 0.9
   },
   {
     "lead_id": "L-008",
@@ -50,7 +50,7 @@
   {
     "lead_id": "L-009",
     "decision": "QUALIFY",
-    "reason": "Credible marketplace with approved budget and clear need for international SEO and multilingual content.",
+    "reason": "Credible Mexican marketplace with approved budget and clear need for international SEO and multilingual content.",
     "confidence": 0.98
   },
   {
@@ -80,7 +80,7 @@
   {
     "lead_id": "L-014",
     "decision": "NURTURE",
-    "reason": "Credible early-stage startup with a relevant service need and future budget signal, but timing and current budget are not sales-ready.",
+    "reason": "Credible early-stage startup with a relevant SEO need and future budget signal, but timing and current budget are not sales-ready.",
     "confidence": 0.95
   },
   {
@@ -93,7 +93,7 @@
     "lead_id": "L-016",
     "decision": "QUALIFY",
     "reason": "Credible HVAC business with a relevant service need and coherent budget and contact data.",
-    "confidence": 0.98
+    "confidence": 0.95
   },
   {
     "lead_id": "L-017",

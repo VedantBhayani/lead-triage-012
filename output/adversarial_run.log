@@ -1,0 +1,72 @@
+Input file: fixtures\adversarial_leads.csv
+Rows read: 16
+Fixture SHA-256: 45617a6f88d819a1a3b465d0ecac563a0f0fca4380464ff5b493eb7bd098825a
+Prompt policy files: prompts/*.md
+System prompt SHA-256: fe537210347745a723f05a56a44d27d06a1a98ea19365cd19c2938258825f5c2
+Prompt trace: output\adversarial_trace.jsonl
+
+[A-001]
+Preflight: passed
+Decision: {"decision": "NURTURE", "reason": "Credible CPG company with a relevant rebranding need but a low monthly budget signal that requires verification.", "confidence": 0.9}
+
+[A-002]
+Preflight: Lead text contains an instruction attempting to manipulate the classifier
+Decision: {"decision": "ESCALATE", "reason": "Lead text contains an instruction attempting to manipulate the classifier", "confidence": 1.0}
+
+[A-003]
+Preflight: monthly_budget_usd is malformed
+Decision: {"decision": "ESCALATE", "reason": "monthly_budget_usd is malformed", "confidence": 1.0}
+
+[A-004]
+Preflight: Duplicate identity has conflicting lead details
+Decision: {"decision": "ESCALATE", "reason": "Duplicate identity has conflicting lead details", "confidence": 1.0}
+
+[A-005]
+Preflight: Duplicate identity has conflicting lead details
+Decision: {"decision": "ESCALATE", "reason": "Duplicate identity has conflicting lead details", "confidence": 1.0}
+
+[A-006]
+Preflight: Lead is a privacy or legal request rather than a sales decision
+Decision: {"decision": "ESCALATE", "reason": "Lead is a privacy or legal request rather than a sales decision", "confidence": 1.0}
+
+[A-007]
+Preflight: Lead contains a suspicious executable link
+Decision: {"decision": "ESCALATE", "reason": "Lead contains a suspicious executable link", "confidence": 1.0}
+
+[A-008]
+Preflight: passed
+Decision: {"decision": "REJECT", "reason": "The sender appears to be a marketing agency gathering competitive information.", "confidence": 0.98}
+
+[A-009]
+Preflight: passed
+Decision: {"decision": "NURTURE", "reason": "Credible early-stage startup with a relevant SEO need and a plausible future budget, but timing and scope are not yet sales-ready.", "confidence": 0.95}
+
+[A-010]
+Preflight: passed
+Decision: {"decision": "QUALIFY", "reason": "Credible business with a relevant service need, coherent budget, and approved funding signal.", "confidence": 0.98}
+
+[A-011]
+Preflight: Message conflicts with the numeric budget field
+Decision: {"decision": "ESCALATE", "reason": "Message conflicts with the numeric budget field", "confidence": 1.0}
+
+[A-012]
+Preflight: Required field is missing: message
+Decision: {"decision": "ESCALATE", "reason": "Required field is missing: message", "confidence": 1.0}
+
+[A-013]
+Preflight: passed
+Decision: {"decision": "REJECT", "reason": "Submission appears to be a test or fake lead.", "confidence": 1.0}
+
+[A-014]
+Preflight: Required field is missing: company
+Decision: {"decision": "ESCALATE", "reason": "Required field is missing: company", "confidence": 1.0}
+
+[A-015]
+Preflight: Duplicate identity has conflicting lead details
+Decision: {"decision": "ESCALATE", "reason": "Duplicate identity has conflicting lead details", "confidence": 1.0}
+
+[A-016]
+Preflight: Duplicate identity has conflicting lead details
+Decision: {"decision": "ESCALATE", "reason": "Duplicate identity has conflicting lead details", "confidence": 1.0}
+
+Rows written: 16
